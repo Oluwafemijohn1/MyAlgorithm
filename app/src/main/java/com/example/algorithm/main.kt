@@ -1,5 +1,7 @@
 package com.example.algorithm
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import kotlin.math.pow
 
 
@@ -16,8 +18,42 @@ fun main() {
 //    print(powM(2, 2))
 
     //POW USAGE
-    println(2.0.pow(2.0))
+//    println(2.0.pow(2.0))
 
+//    println(sockMerchant(9, arrayOf(10, 20, 20, 10, 10, 30, 50, 10, 20)))
+
+    println(reverseNumber(23))
+
+}
+
+fun reverseNumber(num: Int):Int{
+    var num = num
+    var reversed = 0
+
+    while (num != 0) {
+        val digit = num % 10
+        reversed = reversed * 10 + digit
+        num /= 10
+    }
+    return reversed
+}
+
+
+fun getMoneySpent(keyboards: Array<Int>, drives: Array<Int>, b: Int): Int {
+    /*
+     * Write your code here.
+     */
+
+    return keyboards.flatMap { k -> drives.map { it + k } }
+            .filter { it <= b }
+            .max() ?:-1
+}
+
+
+
+fun sockMerchant(n: Int, ar: Array<Int>): Int {
+    // Write your code here
+    return  0
 }
 
 
@@ -27,8 +63,8 @@ fun strangeCounter(t: Long): Long {
     var v1: Long = 3
     var r: Long = 0
     while (t1 < t) {
-        t1 = t1 + v1
-        v1 = v1 * 2
+        t1 += v1
+        v1 *= 2
     }
     r = (t1 - 1) % t
     if (r == 0L) r = v1
@@ -38,7 +74,7 @@ fun strangeCounter(t: Long): Long {
 fun powM(a: Long, b: Int):Long{
     var result =1L
     for(i in 1..b){
-        result = result * a
+        result *= a
     }
     return result
 }

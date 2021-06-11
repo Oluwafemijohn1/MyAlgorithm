@@ -4,6 +4,7 @@ import com.example.algorithm.TargetSumWithPointers.searchTarget
 import com.example.algorithm.TargetSumWithPointers2.searchTarget2
 import java.util.*
 import kotlin.collections.HashMap
+import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
@@ -205,7 +206,28 @@ fun main() {
 //    println(validBracketArray("[()]{}{[()()]()}"))
 //    println(isValid("[()]{}{[()()]()}"))
 
-    println(bracketArray("{[]}"))
+//    println(bracketArray("{[]}"))
+    println(closestNumbers(arrayOf(-20, -3916237, -357920, -3620601, 7374819, -7330761, 30, 6246457, -6461594, 266854, -520, -470 )))
+}
+
+fun closestNumbers(arr: Array<Int>): Array<Int> {
+    // Write your code here
+    arr.sort()
+    var minDiff = Int.MAX_VALUE
+
+    var returnArray = arrayListOf<Int>()
+    for(i in arr.indices){
+        for(j in i+1 until arr.size){
+            var diff = abs(arr[j] - arr[i])
+            minDiff = Math.min(minDiff, diff)
+            if(diff == minDiff){
+                returnArray.add(i)
+                returnArray.add(j)
+            }
+        }
+    }
+    return returnArray.toTypedArray()
+
 }
 
 
