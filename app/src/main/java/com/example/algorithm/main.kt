@@ -24,7 +24,14 @@ fun main() {
 
     println(reverseNumber(23))
 
+    println()
+
 }
+
+
+
+
+
 
 fun reverseNumber(num: Int):Int{
     var num = num

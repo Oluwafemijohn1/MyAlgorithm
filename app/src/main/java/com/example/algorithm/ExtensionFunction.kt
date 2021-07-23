@@ -12,8 +12,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
+//import androidx.core.content.ContextCompat
+//import androidx.core.content.res.ResourcesCompat
 
 
 interface Utils{
