@@ -277,9 +277,7 @@ fun closestNumbers(arr: Array<Int>): Array<Int> {
  * */
 
 fun bracketArray(s: String): Boolean{
-
     var stack = Stack<Char>()
-
     for (i in s){
 
         if (i ==  '(' || i== '{' || i == '['){
@@ -293,7 +291,7 @@ fun bracketArray(s: String): Boolean{
 
 fun validBracketArray(s:String):Boolean{
     //Get an HasMap of key ({[ and }})
-    val collection = hashMapOf<Char, Char>(
+    val collection = hashMapOf(
             '(' to ')',
             '{' to '}',
             '[' to ']'
