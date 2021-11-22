@@ -18,3 +18,4 @@ fun palindromeParmutations(palindromeString: String):Boolean {
     }
     return stack.size <= 1
 }
+

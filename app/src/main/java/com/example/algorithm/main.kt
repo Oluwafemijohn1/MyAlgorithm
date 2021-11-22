@@ -22,10 +22,28 @@ fun main() {
 
 //    println(sockMerchant(9, arrayOf(10, 20, 20, 10, 10, 30, 50, 10, 20)))
 
-    println(reverseNumber(23))
+//    println(reverseNumber(23))
 
-    println()
+    println(laptopLeaseTIme(listOf(listOf(0,2),listOf(1,4), listOf(4,6), listOf(0,4), listOf(7,8), listOf(9, 11), listOf(3,10))))
 
+
+}
+
+fun laptopLeaseTIme(time:List<List<Int>>):Int{
+    var count = 0
+    time.forEachIndexed { index, list ->
+       list.mapIndexed { index1, i ->
+
+       }
+    }
+//    for (i in time.indices){
+//        for (j in time.indices){
+//            if(time[i].contains(time[i]. ..time[i][1])){
+//                count++
+//            }
+//        }
+//    }
+    return count
 }
 
 
@@ -61,6 +79,24 @@ fun getMoneySpent(keyboards: Array<Int>, drives: Array<Int>, b: Int): Int {
 fun sockMerchant(n: Int, ar: Array<Int>): Int {
     // Write your code here
     return  0
+}
+
+fun outliers(arr: Array<Int>): Int {
+    // Write your code here
+    var even = mutableListOf<Int>()
+    var odd = mutableListOf<Int>()
+    arr.forEach {
+        if (it % 2 != 0) {
+            odd.add(it)
+        } else {
+            even.add(it)
+        }
+    }
+    return if (even.size > odd.size) {
+        odd.size
+    } else {
+        even.size
+    }
 }
 
 
