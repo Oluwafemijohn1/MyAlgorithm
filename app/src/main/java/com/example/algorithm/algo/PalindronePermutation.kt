@@ -16,6 +16,7 @@ fun palindromeParmutations(palindromeString: String):Boolean {
             stack.add(i)
         }
     }
+    println(stack)
     return stack.size <= 1
 }
 
