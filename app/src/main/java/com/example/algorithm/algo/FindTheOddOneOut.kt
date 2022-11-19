@@ -1,7 +1,7 @@
 package com.example.algorithm
 
 fun main() {
-
+    println(find(arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)))
 }
 
 
@@ -13,6 +13,8 @@ fun find(integers: Array<Int>): Int {
         if (it % 2 == 0) even.add(it)
         else odd.add(it)
     }
+    println(even)
+    println(odd)
     return     if (even.size == 1)   even[0] else   odd[0]
 }
 

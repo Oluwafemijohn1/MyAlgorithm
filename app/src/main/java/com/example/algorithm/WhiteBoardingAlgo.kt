@@ -9,6 +9,34 @@ import kotlin.math.max
 import kotlin.math.min
 
 
+
+fun main() {
+    //CREATED BY ANIETIE IN THE CLASS, TO REMOVE DUPLICATE
+//    removeDuplicate(intArrayOf(2,3,3,3,6,9,9))
+
+    //CREATED BY ME
+//    print(powM(2, 2))
+
+    //TWO POINTERS, TARGET SUM
+//    print(searchTarget(intArrayOf(2,3,5,6,7,7,8,9,10), 9))
+//    println(searchTarget(intArrayOf(2,3,3,3,6,9,9,5), 6))
+
+    // SLIDING WINDOW TECHNIQUES
+
+    //Group 1
+//    println(findMaxSumArray(arrayOf(4, 2, 1, 7, 8, 1, 2, 1, 8, 1, 0), 3))
+    //Group 2
+//    println(findMinSumArray(arrayOf(4, 2, 1, 7, 8, 1, 2, 1, 8, 1, 0), 3))
+
+//    println(searchTarget(intArrayOf(1, 2, 3, 4, 6), 6))
+//    println(searchTarget2(intArrayOf(1, 2, 3, 4, 6), 6))
+
+//    println(validBracketArray("[()]{}{[()()]()}"))
+//    println(isValid("[()]{}{[()()]()}"))
+
+//    println(bracketArray("{[]}"))
+    println(closestNumbers(arrayOf(-20, -3916237, -357920, -3620601, 7374819, -7330761, 30, 6246457, -6461594, 266854, -520, -470 )))
+}
 //1
 /**
  * CREATED BY ANIETIE IN THE CLASS, TO REMOVE DUPLICATE
@@ -92,7 +120,7 @@ object TargetSumWithPointers {
 }
 
 object TargetSumWithPointers2 {
-    fun searchTarget2(array: IntArray, targetSum: Int): List<Int> {
+    fun searchTarget2(array: IntArray, targetSum: Int): IntArray {
         val results = mutableListOf<Int>()
         /// 1, 2, 3, 4, 6    targetSum = 6
         var pointerOne = 0
@@ -109,7 +137,7 @@ object TargetSumWithPointers2 {
                 pointerOne++
             }
         }
-        return results.toList()
+        return results.toIntArray()
     }
 }
 
@@ -182,33 +210,7 @@ fun smallestSubArray(array: Array<Int>, k: Int): Int {
 
 
 
-fun main() {
-    //CREATED BY ANIETIE IN THE CLASS, TO REMOVE DUPLICATE
-//    removeDuplicate(intArrayOf(2,3,3,3,6,9,9))
 
-    //CREATED BY ME
-//    print(powM(2, 2))
-
-     //TWO POINTERS, TARGET SUM
-//    print(searchTarget(intArrayOf(2,3,5,6,7,7,8,9,10), 9))
-//    println(searchTarget(intArrayOf(2,3,3,3,6,9,9,5), 6))
-
-     // SLIDING WINDOW TECHNIQUES
-
-    //Group 1
-//    println(findMaxSumArray(arrayOf(4, 2, 1, 7, 8, 1, 2, 1, 8, 1, 0), 3))
-    //Group 2
-//    println(findMinSumArray(arrayOf(4, 2, 1, 7, 8, 1, 2, 1, 8, 1, 0), 3))
-
-//    println(searchTarget(intArrayOf(1, 2, 3, 4, 6), 6))
-//    println(searchTarget2(intArrayOf(1, 2, 3, 4, 6), 6))
-
-//    println(validBracketArray("[()]{}{[()()]()}"))
-//    println(isValid("[()]{}{[()()]()}"))
-
-//    println(bracketArray("{[]}"))
-    println(closestNumbers(arrayOf(-20, -3916237, -357920, -3620601, 7374819, -7330761, 30, 6246457, -6461594, 266854, -520, -470 )))
-}
 
 fun closestNumbers(arr: Array<Int>): Array<Int> {
     // Write your code here

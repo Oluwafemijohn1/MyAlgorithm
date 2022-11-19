@@ -3,7 +3,7 @@ package com.example.algorithm.algo
 import java.util.regex.Pattern
 
 fun main() {
-    println(getCount("abracadabra"))
+    println(getCount3("abracadabra"))
 }
 
 fun getCount(str : String) : Int {
